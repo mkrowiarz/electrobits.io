@@ -3036,12 +3036,3053 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "c5Wpa",
+      "x": 0,
+      "y": 3216,
+      "name": "electrobits.io — Catppuccin Latte",
+      "theme": {
+        "mode": "catppuccin-latte"
+      },
+      "width": 1440,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "p9OZ2",
+          "name": "Header",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "padding": [
+            16,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "YcGKi",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "electrobits",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "dgWOB",
+              "name": "Nav Right",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cknrg",
+                  "name": "Nav Links",
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FaT6c",
+                      "name": "link1",
+                      "fill": "$text-secondary",
+                      "content": "About",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FAsfV",
+                      "name": "link2",
+                      "fill": "$text-secondary",
+                      "content": "Apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FwRbe",
+                      "name": "link3",
+                      "fill": "$text-secondary",
+                      "content": "Contact",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "z9Y1F",
+                  "name": "CTA Button",
+                  "fill": "$accent-bg",
+                  "cornerRadius": 8,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WrSeq",
+                      "name": "ctaText",
+                      "fill": "$btn-primary-text",
+                      "content": "Get in touch",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bMgxU",
+          "name": "Hero",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80,
+            80,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "uFlgT",
+              "name": "Badge",
+              "fill": "$badge-bg",
+              "cornerRadius": 9999,
+              "gap": 8,
+              "padding": [
+                6,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "fMS6X",
+                  "name": "badgeIcon",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "rocket",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-text"
+                },
+                {
+                  "type": "text",
+                  "id": "0mX1m",
+                  "name": "badgeText",
+                  "fill": "$accent-text",
+                  "content": "Independently built & globally shipped",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KQ2mG",
+              "name": "Headline",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "62EC5",
+                  "name": "headLine1",
+                  "fill": "$text-primary",
+                  "content": "Apps that ship.",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Inter",
+                  "fontSize": 58,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "gkCfJ",
+                  "name": "headLine2",
+                  "fill": "$accent-text",
+                  "content": "Backends that scale.",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Inter",
+                  "fontSize": 58,
+                  "fontWeight": "500",
+                  "letterSpacing": -1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "cf5E3",
+              "name": "Description",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 500,
+              "content": "Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "tcenE",
+              "name": "Button Row",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zhVVf",
+                  "name": "Explore Apps Btn",
+                  "fill": "$accent-bg",
+                  "cornerRadius": 8,
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rJecm",
+                      "name": "btnFilledTxt",
+                      "fill": "$btn-primary-text",
+                      "content": "Explore apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ujqvD",
+                  "name": "Contact Us Btn",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$btn-outline-border"
+                  },
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iy9ua",
+                      "name": "btnOutlineTxt",
+                      "fill": "$text-primary",
+                      "content": "Contact us",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VHBCA",
+              "name": "App Cards Row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rVFUA",
+                  "name": "App Preview Card",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5dIip",
+                      "name": "App Logo",
+                      "clip": true,
+                      "width": 36,
+                      "height": 36,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1773738858136.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NrF7V",
+                      "name": "App Info",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l8qNX",
+                          "name": "appName",
+                          "fill": "$text-primary",
+                          "content": "Deadpoint",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ryRRs",
+                          "name": "appSub",
+                          "fill": "$text-muted",
+                          "content": "iOS, Android",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Iqckr",
+                  "name": "Coach Preview Card",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ssmCG",
+                      "name": "Coach Icon",
+                      "clip": true,
+                      "width": 36,
+                      "height": 36,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1773739661943.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "0DqiY",
+                      "name": "Coach Info",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dnDlS",
+                          "name": "cpName",
+                          "fill": "$text-primary",
+                          "content": "Coach Platform",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y1eYF",
+                          "name": "cpSub",
+                          "fill": "$text-muted",
+                          "content": "Web, Symfony",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fmkOC",
+          "name": "About",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "gap": 80,
+          "padding": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "cdA19",
+              "name": "About Left",
+              "width": 500,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8PyD6",
+                  "name": "overline",
+                  "fill": "$accent-text",
+                  "content": "ABOUT US",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "9NCsc",
+                  "name": "headline",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "We build software people actually use",
+                  "lineHeight": 1.2,
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "7nwqC",
+                  "name": "para1",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "Behind electrobits is a solo developer with a clear mission: build mobile apps that feel native, perform flawlessly, and solve real problems. Every project starts with deep user research and ends with software people genuinely enjoy using.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "0XVWK",
+                  "name": "para2",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "On the backend, everything runs on Symfony — a proven PHP framework that delivers the reliability and scalability needed for production-grade platforms. No bloat, no shortcuts, just clean architecture from front to back.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ylt7I",
+              "name": "About Right",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZYX2v",
+                  "name": "Stats Row 1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "f74Zt",
+                      "name": "Stat Card 1",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XuX0d",
+                          "name": "val1",
+                          "fill": "$text-primary",
+                          "content": "5+",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Z8uSl",
+                          "name": "lbl1",
+                          "fill": "$text-secondary",
+                          "content": "Years of experience",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Pb1LF",
+                      "name": "Stat Card 2",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wJH6Z",
+                          "name": "val2",
+                          "fill": "$text-primary",
+                          "content": "2",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ympwY",
+                          "name": "lbl2",
+                          "fill": "$text-secondary",
+                          "content": "Apps in development",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T5QXn",
+                  "name": "Stats Row 2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P1v2F",
+                      "name": "Stat Card 3",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HjtI6",
+                          "name": "val3",
+                          "fill": "$text-primary",
+                          "content": "4.7★",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WlU0x",
+                          "name": "lbl3",
+                          "fill": "$text-secondary",
+                          "content": "Average user rating",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nIwgJ",
+                      "name": "Stat Card 4",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eRPsJ",
+                          "name": "val4",
+                          "fill": "$text-primary",
+                          "content": "Symfony",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fU8Cr",
+                          "name": "lbl4",
+                          "fill": "$text-secondary",
+                          "content": "Backend framework",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fwE2z",
+          "name": "Principles",
+          "width": "fill_container",
+          "fill": "$bg-section-alt",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "AjnZM",
+              "name": "headerGroup",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "H2LKv",
+                  "name": "overline",
+                  "fill": "$accent-text",
+                  "content": "WHAT WE STAND FOR",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "rDVvP",
+                  "name": "headline",
+                  "fill": "$text-primary",
+                  "content": "Principles behind every product",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "RkXLX",
+                  "name": "subline",
+                  "fill": "$text-secondary",
+                  "content": "We apply the same standards to every piece of software we ship.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "70wez",
+              "name": "cardsRow",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "imvEG",
+                  "name": "card1",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "4CXl9",
+                      "name": "icon1Wrap",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$badge-bg",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "7hOho",
+                          "name": "icon1",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "shield-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f6Gto",
+                      "name": "title1",
+                      "fill": "$text-primary",
+                      "content": "Privacy first",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "93Gdd",
+                      "name": "desc1",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2BZjm",
+                  "name": "card2",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HyHue",
+                      "name": "icon2Wrap",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$badge-bg",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "tVbct",
+                          "name": "icon2",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "zap",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "z46O7",
+                      "name": "title2",
+                      "fill": "$text-primary",
+                      "content": "Performance",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UWczz",
+                      "name": "desc2",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QZFfO",
+                  "name": "card3",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "03i59",
+                      "name": "icon3Wrap",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$badge-bg",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "o1kU8",
+                          "name": "icon3",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "headphones",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "gYRNn",
+                      "name": "title3",
+                      "fill": "$text-primary",
+                      "content": "Reliable support",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "H2Qlh",
+                      "name": "desc3",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Direct access to the developer. No support tickets lost in queues, no bots — real human help.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cZSh5",
+          "name": "Products",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "qrJ59",
+              "name": "pHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mUAQm",
+                  "name": "pOverline",
+                  "fill": "$accent-text",
+                  "content": "OUR APPS",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "oRkwO",
+                  "name": "pHeadline",
+                  "fill": "$text-primary",
+                  "content": "Products available on Google Play",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "nP7PA",
+                  "name": "pSubline",
+                  "fill": "$text-secondary",
+                  "content": "We build quality apps with a focus on performance, privacy, and user experience.",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TSuAU",
+              "name": "prodCard",
+              "width": "fill_container",
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "gap": 24,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cVo85",
+                  "name": "logoFrame",
+                  "width": 80,
+                  "height": 80,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773738901420.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "UPEgj",
+                  "name": "rightCol",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dbkv6",
+                      "name": "prodTitle",
+                      "fill": "$text-primary",
+                      "content": "Deadpoint — Mobile App",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8ddWa",
+                      "name": "prodDesc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "Your personal climbing training assistant for iOS and Android. Track sessions, analyze progress, follow structured training plans, and push your climbing to the next level.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xjJ7W",
+                      "name": "badgeRow",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "33iCs",
+                          "name": "badge1",
+                          "fill": "$badge-bg",
+                          "cornerRadius": 9999,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ShYZH",
+                              "name": "badge1Text",
+                              "fill": "$badge-text",
+                              "content": "Coming Soon",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nIHhY",
+                          "name": "badge2",
+                          "fill": "$bg-card",
+                          "cornerRadius": 9999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$border-card"
+                          },
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ip8yw",
+                              "name": "badge2Text",
+                              "fill": "$text-secondary",
+                              "content": "iOS & Android",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Z3fWW",
+              "name": "Coach Platform Card",
+              "width": "fill_container",
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "gap": 24,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "k2LC5",
+                  "name": "Coach Logo",
+                  "width": 80,
+                  "height": 80,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773739639167.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "hllXK",
+                  "name": "Coach Info",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gzR9g",
+                      "name": "coachTitle",
+                      "fill": "$text-primary",
+                      "content": "Deadpoint — Coach Platform",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8afjD",
+                      "name": "coachDesc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "A dedicated web platform for climbing coaches to manage athletes, create training plans, track progress, and communicate — all powered by Symfony.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NXDGz",
+                      "name": "Badge Row",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "TLnri",
+                          "name": "Web Badge",
+                          "fill": "$badge-bg",
+                          "cornerRadius": 9999,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "9P23s",
+                              "name": "cbadge1t",
+                              "fill": "$badge-text",
+                              "content": "Web Platform",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sTMp2",
+                          "name": "Symfony Badge",
+                          "fill": "$bg-card",
+                          "cornerRadius": 9999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$border-card"
+                          },
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "vcMIU",
+                              "name": "cbadge2t",
+                              "fill": "$text-secondary",
+                              "content": "Symfony",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oMgY8",
+          "name": "Contact",
+          "width": "fill_container",
+          "fill": "$bg-section-alt",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TqRBc",
+              "name": "overline",
+              "fill": "$accent-text",
+              "content": "CONTACT",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "vDOe2",
+              "name": "headline",
+              "fill": "$text-primary",
+              "content": "Get in touch",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "700",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "frame",
+              "id": "vnKuu",
+              "name": "Contact Card",
+              "width": 700,
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                40,
+                48
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DJZBF",
+                  "name": "cardTitle",
+                  "fill": "$text-primary",
+                  "content": "We'd love to hear from you",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "T0qfp",
+                  "name": "cardDesc",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "Have a question about our software, apps, or partnership inquiries? Reach out and we'll get back to you directly.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "HNYXU",
+                  "name": "Email Link",
+                  "fill": "$badge-bg",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "eoR9h",
+                      "name": "emailIcon",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-text"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LX1fk",
+                      "name": "emailText",
+                      "fill": "$accent-text",
+                      "content": "hello@electrobits.io",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "YtIzr",
+                  "name": "Divider",
+                  "fill": "$border-card",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "x98hb",
+                  "name": "Info Row",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cDz04",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "6244X",
+                          "name": "icon1",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "building-2",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "olbD2",
+                          "name": "text1",
+                          "fill": "$text-secondary",
+                          "content": "electrobits",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FubGW",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "zXUwT",
+                          "name": "icon2",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tcdfY",
+                          "name": "text2",
+                          "fill": "$text-secondary",
+                          "content": "Remote, EU",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9Tk5D",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "KjJaZ",
+                          "name": "icon3",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "IVHfZ",
+                          "name": "text3",
+                          "fill": "$text-secondary",
+                          "content": "electrobits.io",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mGFmC",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "RD2nS",
+              "name": "Top Border",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "FXDnJ",
+              "name": "Footer Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "llHhi",
+                  "name": "copyText",
+                  "fill": "$text-muted",
+                  "content": "© 2025 electrobits. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "LmyQh",
+                  "name": "Footer Nav",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vZUgn",
+                      "name": "navAbout",
+                      "fill": "$text-secondary",
+                      "content": "About",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IKnzk",
+                      "name": "navApps",
+                      "fill": "$text-secondary",
+                      "content": "Apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "usB7H",
+                      "name": "navPrivacy",
+                      "fill": "$text-secondary",
+                      "content": "Privacy Policy",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GY7lb",
+                      "name": "navContact",
+                      "fill": "$text-secondary",
+                      "content": "Contact",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ifUQO",
+      "x": 1600,
+      "y": 3189,
+      "name": "electrobits.io — Catppuccin Mocha",
+      "theme": {
+        "mode": "catppuccin-mocha"
+      },
+      "width": 1440,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "lBybV",
+          "name": "Header",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "padding": [
+            16,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3gvMB",
+              "name": "brandText",
+              "fill": "$text-primary",
+              "content": "electrobits",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "OyV7r",
+              "name": "navRight",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "e4wo9",
+                  "name": "navLinks",
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hGCwa",
+                      "name": "link1",
+                      "fill": "$text-secondary",
+                      "content": "About",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sD3f2",
+                      "name": "link2",
+                      "fill": "$text-secondary",
+                      "content": "Apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QVHlv",
+                      "name": "link3",
+                      "fill": "$text-secondary",
+                      "content": "Contact",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2rX9r",
+                  "name": "btn",
+                  "fill": "$accent-bg",
+                  "cornerRadius": 8,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o1fdd",
+                      "name": "btnText",
+                      "fill": "$btn-primary-text",
+                      "content": "Get in touch",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "XOhYv",
+          "name": "Hero",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            80,
+            80,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "95yiU",
+              "name": "badge",
+              "fill": "$badge-bg",
+              "cornerRadius": 9999,
+              "gap": 8,
+              "padding": [
+                6,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "ZIzqn",
+                  "name": "badgeIcon",
+                  "width": 14,
+                  "height": 14,
+                  "iconFontName": "rocket",
+                  "iconFontFamily": "lucide",
+                  "fill": "$accent-text"
+                },
+                {
+                  "type": "text",
+                  "id": "ixwIU",
+                  "name": "badgeText",
+                  "fill": "$accent-text",
+                  "content": "Independently built & globally shipped",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZVZzP",
+              "name": "headlineWrap",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LsJou",
+                  "name": "h1line1",
+                  "fill": "$text-primary",
+                  "content": "Apps that ship.",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Inter",
+                  "fontSize": 58,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "OArvV",
+                  "name": "h1line2",
+                  "fill": "$accent-text",
+                  "content": "Backends that scale.",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Inter",
+                  "fontSize": 58,
+                  "fontWeight": "500",
+                  "letterSpacing": -1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "itoV8",
+              "name": "desc",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 500,
+              "content": "Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.",
+              "lineHeight": 1.6,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ppYfO",
+              "name": "btnRow",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dep2W",
+                  "name": "btnExplore",
+                  "fill": "$accent-bg",
+                  "cornerRadius": 8,
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mEhVw",
+                      "name": "btnExploreText",
+                      "fill": "$btn-primary-text",
+                      "content": "Explore apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "977bq",
+                  "name": "btnContact",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$btn-outline-border"
+                  },
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Aw8Bh",
+                      "name": "btnContactText",
+                      "fill": "$text-primary",
+                      "content": "Contact us",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B2fZq",
+              "name": "appCardsRow",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lFsHo",
+                  "name": "appCard",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yO34K",
+                      "name": "logoFrame",
+                      "clip": true,
+                      "width": 36,
+                      "height": 36,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1773738858646.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4ebnO",
+                      "name": "appInfo",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5hQaG",
+                          "name": "appName",
+                          "fill": "$text-primary",
+                          "content": "Deadpoint",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xt10N",
+                          "name": "appSub",
+                          "fill": "$text-muted",
+                          "content": "iOS, Android",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PITvf",
+                  "name": "coachAppCard",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nU21u",
+                      "name": "coachLogoFrame",
+                      "clip": true,
+                      "width": 36,
+                      "height": 36,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1773739633916.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Q2wl1",
+                      "name": "coachInfo",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eSIWr",
+                          "name": "coachName",
+                          "fill": "$text-primary",
+                          "content": "Coach Platform",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CuiuT",
+                          "name": "coachSub",
+                          "fill": "$text-muted",
+                          "content": "Web, Symfony",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZpxDV",
+          "name": "About",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "gap": 80,
+          "padding": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "n0ZUZ",
+              "name": "leftCol",
+              "width": 500,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "41so7",
+                  "name": "overline",
+                  "fill": "$accent-text",
+                  "content": "ABOUT US",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "1GeFn",
+                  "name": "headline",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "We build software people actually use",
+                  "lineHeight": 1.2,
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "j8gmE",
+                  "name": "para1",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "electrobits is a solo development studio focused on crafting high-quality mobile applications backed by robust Symfony APIs. Every app is designed with real users in mind — intuitive interfaces, reliable performance, and thoughtful details that make a difference.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RbHWX",
+                  "name": "para2",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "From concept to deployment, every line of code is written with care. No bloated teams, no endless meetings — just focused engineering that ships products people love to use every day.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2nEy0",
+              "name": "rightCol",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JWCVH",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EyieR",
+                      "name": "card1",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9zb0I",
+                          "name": "val1",
+                          "fill": "$text-primary",
+                          "content": "5+",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8kp7a",
+                          "name": "lab1",
+                          "fill": "$text-secondary",
+                          "content": "Years of experience",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gKTpS",
+                      "name": "card2",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fVw2r",
+                          "name": "val2",
+                          "fill": "$text-primary",
+                          "content": "2",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3AvuV",
+                          "name": "lab2",
+                          "fill": "$text-secondary",
+                          "content": "Apps in development",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "7vHiC",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DLPd8",
+                      "name": "card3",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cV6hC",
+                          "name": "val3",
+                          "fill": "$text-primary",
+                          "content": "4.7★",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "srzd3",
+                          "name": "lab3",
+                          "fill": "$text-secondary",
+                          "content": "Average user rating",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZfLNn",
+                      "name": "card4",
+                      "width": "fill_container",
+                      "fill": "$bg-card",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$border-card"
+                      },
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "G3E0w",
+                          "name": "val4",
+                          "fill": "$text-primary",
+                          "content": "Symfony",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HLg6O",
+                          "name": "lab4",
+                          "fill": "$text-secondary",
+                          "content": "Backend framework",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "V3Pu5",
+          "name": "Principles",
+          "width": "fill_container",
+          "fill": "$bg-section-alt",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "K9JzL",
+              "name": "darkHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DxBvi",
+                  "name": "dOverline",
+                  "fill": "$accent-text",
+                  "content": "WHAT WE STAND FOR",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "NKeqE",
+                  "name": "dHeadline",
+                  "fill": "$text-primary",
+                  "content": "Principles behind every product",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "QiOoS",
+                  "name": "dSubline",
+                  "fill": "$text-secondary",
+                  "content": "We apply the same standards to every piece of software we ship.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3G3fk",
+              "name": "dCardsRow",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SHySO",
+                  "name": "dc1",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5OKdV",
+                      "name": "di1w",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$bg-card-hover",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "URq5C",
+                          "name": "di1",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "shield-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xVgXH",
+                      "name": "dt1",
+                      "fill": "$text-primary",
+                      "content": "Privacy first",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oUkCQ",
+                      "name": "dd1",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hfPC8",
+                  "name": "dc2",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5gUMk",
+                      "name": "di2w",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$bg-card-hover",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "WyjdG",
+                          "name": "di2",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "zap",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "gZ8dc",
+                      "name": "dt2",
+                      "fill": "$text-primary",
+                      "content": "Performance",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "deZxh",
+                      "name": "dd2",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bJS4F",
+                  "name": "dc3",
+                  "width": "fill_container",
+                  "fill": "$bg-card",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$border-card"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BGQ3A",
+                      "name": "di3w",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$bg-card-hover",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "rAykE",
+                          "name": "di3",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "headphones",
+                          "iconFontFamily": "lucide",
+                          "fill": "$accent-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "rsYjJ",
+                      "name": "dt3",
+                      "fill": "$text-primary",
+                      "content": "Reliable support",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yv1Km",
+                      "name": "dd3",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Direct access to the developer. No support tickets lost in queues, no bots — real human help.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rwu0G",
+          "name": "Products",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": 80,
+          "children": [
+            {
+              "type": "frame",
+              "id": "sjmVI",
+              "name": "dpHeader",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bvFpM",
+                  "name": "dpOverline",
+                  "fill": "$accent-text",
+                  "content": "OUR APPS",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "WJ0J5",
+                  "name": "dpHeadline",
+                  "fill": "$text-primary",
+                  "content": "Products available on Google Play",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "wfhOg",
+                  "name": "dpSubline",
+                  "fill": "$text-secondary",
+                  "content": "We build quality apps with a focus on performance, privacy, and user experience.",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XuCu9",
+              "name": "dpCard",
+              "width": "fill_container",
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "gap": 24,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "szGUu",
+                  "name": "dpLogo",
+                  "width": 80,
+                  "height": 80,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773738928608.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "g9mJk",
+                  "name": "dpRight",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5gO9a",
+                      "name": "dpTitle",
+                      "fill": "$text-primary",
+                      "content": "Deadpoint — Mobile App",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RqidN",
+                      "name": "dpDescT",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "Your personal climbing training assistant for iOS and Android. Track sessions, analyze progress, follow structured training plans, and push your climbing to the next level.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oZa6b",
+                      "name": "dpBadgeRow",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mBTNS",
+                          "name": "dpBadge1",
+                          "fill": "$badge-bg",
+                          "cornerRadius": 9999,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FqFjw",
+                              "name": "dpB1Text",
+                              "fill": "$badge-text",
+                              "content": "Coming Soon",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8lTyJ",
+                          "name": "dpBadge2",
+                          "fill": "$bg-card",
+                          "cornerRadius": 9999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$border-card"
+                          },
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SSqz9",
+                              "name": "dpB2Text",
+                              "fill": "$text-secondary",
+                              "content": "iOS & Android",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SnjmW",
+              "name": "coachProductCard",
+              "width": "fill_container",
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "gap": 24,
+              "padding": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ds62g",
+                  "name": "coachProdLogo",
+                  "clip": true,
+                  "width": 80,
+                  "height": 80,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773739669736.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "WNs0w",
+                  "name": "coachProdRight",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "My4HN",
+                      "name": "coachProdTitle",
+                      "fill": "$text-primary",
+                      "content": "Deadpoint — Coach Platform",
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "M3oUp",
+                      "name": "coachProdDesc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 600,
+                      "content": "A dedicated web platform for climbing coaches to manage athletes, create training plans, track progress, and communicate — all powered by Symfony.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oFeE3",
+                      "name": "coachBadgeRow",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XdXhr",
+                          "name": "webPlatformBadge",
+                          "fill": "$badge-bg",
+                          "cornerRadius": 9999,
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "UDWEw",
+                              "name": "badge1Text",
+                              "fill": "$badge-text",
+                              "content": "Web Platform",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8UE7e",
+                          "name": "symfonyBadge",
+                          "fill": "$bg-card",
+                          "cornerRadius": 9999,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "$border-card"
+                          },
+                          "padding": [
+                            6,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "o5Y59",
+                              "name": "badge2Text",
+                              "fill": "$text-secondary",
+                              "content": "Symfony",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1Rmq0",
+          "name": "Contact",
+          "width": "fill_container",
+          "fill": "$bg-section-alt",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Psk6w",
+              "name": "dOverline",
+              "fill": "$accent-text",
+              "content": "CONTACT",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "7KI3b",
+              "name": "dHeadline",
+              "fill": "$text-primary",
+              "content": "Get in touch",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "700",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "frame",
+              "id": "PleHV",
+              "name": "Contact Card",
+              "width": 700,
+              "fill": "$bg-card",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$border-card"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                40,
+                48
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DNaw8",
+                  "name": "dCardTitle",
+                  "fill": "$text-primary",
+                  "content": "We'd love to hear from you",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "2QGaC",
+                  "name": "dCardDesc",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "Have a question about our software, apps, or partnership inquiries? Reach out and we'll get back to you directly.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "RxijQ",
+                  "name": "Email Link",
+                  "fill": "$badge-bg",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "MIrXf",
+                      "name": "dEmailIco",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "$accent-text"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zrugy",
+                      "name": "dEmailTxt",
+                      "fill": "$accent-text",
+                      "content": "hello@electrobits.io",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "XKnY5",
+                  "name": "Divider",
+                  "fill": "$border-card",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "8stKo",
+                  "name": "Info Row",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JlDJu",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "dtyvC",
+                          "name": "di1ico",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "building-2",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EO0oe",
+                          "name": "di1txt",
+                          "fill": "$text-secondary",
+                          "content": "electrobits",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "0wdMt",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "aNCCj",
+                          "name": "di2ico",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "455cC",
+                          "name": "di2txt",
+                          "fill": "$text-secondary",
+                          "content": "Remote, EU",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QJJFH",
+                      "name": "Info Item",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "GcGgB",
+                          "name": "di3ico",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "$text-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wr6qg",
+                          "name": "di3txt",
+                          "fill": "$text-secondary",
+                          "content": "electrobits.io",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tKFeU",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$bg-page",
+          "padding": [
+            24,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "thNXW",
+              "name": "Top Border",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "qYa31",
+              "name": "Footer Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Cpy3G",
+                  "name": "dCopyTxt",
+                  "fill": "$text-muted",
+                  "content": "© 2025 electrobits. All rights reserved.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "qpWYp",
+                  "name": "Footer Nav",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8l7Ql",
+                      "name": "dfn1",
+                      "fill": "$text-secondary",
+                      "content": "About",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nMdvE",
+                      "name": "dfn2",
+                      "fill": "$text-secondary",
+                      "content": "Apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fVU4f",
+                      "name": "dfn3",
+                      "fill": "$text-secondary",
+                      "content": "Privacy Policy",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xLmJB",
+                      "name": "dfn4",
+                      "fill": "$text-secondary",
+                      "content": "Contact",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "themes": {
     "mode": [
       "light",
-      "dark"
+      "dark",
+      "catppuccin-latte",
+      "catppuccin-mocha"
     ]
   },
   "variables": {
@@ -3058,6 +6099,30 @@
           "value": "#818CF8",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#818CF8",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#8839ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cba6f7",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3076,6 +6141,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#8839ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cba6f7",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3092,6 +6181,30 @@
           "value": "#A5B4FC",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#A5B4FC",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#8839ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cba6f7",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3110,6 +6223,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#EEF2FF",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#1E1B4B",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#e6e9ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#313244",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3126,6 +6263,30 @@
           "value": "#A5B4FC",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#A5B4FC",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#8839ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cba6f7",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3144,6 +6305,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#111827",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#eff1f5",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#313244",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3160,6 +6345,30 @@
           "value": "#1A2235",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#F3F4F6",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#1A2235",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#dce0e8",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#45475a",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3178,6 +6387,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#0B0F19",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#eff1f5",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#1e1e2e",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3194,6 +6427,30 @@
           "value": "#0F1525",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#F8F9FB",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#0F1525",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#e6e9ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#181825",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3212,6 +6469,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#E5E7EB",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#1F2937",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#bcc0cc",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#45475a",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3228,6 +6509,30 @@
           "value": "#1A1F2E",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#F0F0F0",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#1A1F2E",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#ccd0da",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#313244",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3246,6 +6551,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#D1D5DB",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#374151",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#acb0be",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#585b70",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3262,6 +6591,30 @@
           "value": "#6366F1",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#6366F1",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#8839ef",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cba6f7",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3280,6 +6633,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#eff1f5",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#1e1e2e",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3296,6 +6673,30 @@
           "value": "#6B7280",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#9CA3AF",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#6B7280",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#9ca0b0",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#6c7086",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
@@ -3314,6 +6715,30 @@
           "theme": {
             "mode": "dark"
           }
+        },
+        {
+          "value": "#111827",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#4c4f69",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#cdd6f4",
+          "theme": {
+            "mode": "catppuccin-mocha"
+          }
         }
       ]
     },
@@ -3330,6 +6755,30 @@
           "value": "#9CA3AF",
           "theme": {
             "mode": "dark"
+          }
+        },
+        {
+          "value": "#6B7280",
+          "theme": {
+            "mode": "light"
+          }
+        },
+        {
+          "value": "#9CA3AF",
+          "theme": {
+            "mode": "dark"
+          }
+        },
+        {
+          "value": "#6c6f85",
+          "theme": {
+            "mode": "catppuccin-latte"
+          }
+        },
+        {
+          "value": "#a6adc8",
+          "theme": {
+            "mode": "catppuccin-mocha"
           }
         }
       ]
