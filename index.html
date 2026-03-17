@@ -727,6 +727,141 @@
       gap: 12px;
     }
 
+    .lang-switch {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .lang-switch button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+
+    .lang-switch button:hover {
+      color: var(--text-primary);
+    }
+
+    .lang-switch button.active {
+      color: var(--text-primary);
+    }
+
+    .lang-switch .sep {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Cookie consent */
+    .cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 20px 24px;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      animation: cookieSlideIn 0.3s ease-out;
+    }
+
+    @keyframes cookieSlideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cookie-banner.hidden {
+      display: none;
+    }
+
+    .cookie-banner .cookie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .cookie-banner .cookie-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .cookie-banner .cookie-text a {
+      color: var(--text-primary);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .cookie-banner .cookie-text a:hover {
+      color: var(--accent-text);
+    }
+
+    .cookie-close {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0;
+      margin: -4px -4px 0 8px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .cookie-close:hover {
+      color: var(--text-primary);
+    }
+
+    .cookie-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cookie-actions .btn-decline {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 2px;
+    }
+
+    .cookie-actions .btn-decline:hover {
+      color: var(--text-secondary);
+    }
+
+    .cookie-actions .btn-accept {
+      background: var(--accent-bg);
+      color: var(--btn-primary-text);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+
+    .cookie-actions .btn-accept:hover {
+      opacity: 0.9;
+    }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .about > .container {
@@ -814,9 +949,14 @@
     <a href="#" class="brand">electrobits</a>
     <nav class="nav-right">
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#apps">Apps</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#apps" data-i18n="nav.apps">Apps</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="lang-switch">
+        <button onclick="setLang('en')" id="lang-en" class="active">EN</button>
+        <span class="sep">/</span>
+        <button onclick="setLang('pl')" id="lang-pl">PL</button>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -824,7 +964,7 @@
         <svg class="icon-cat-latte" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
         <svg class="icon-cat-mocha" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
       </button>
-      <a href="#contact" class="btn-primary">Get in touch</a>
+      <a href="#contact" class="btn-primary" data-i18n="nav.cta">Get in touch</a>
     </nav>
    </div>
   </header>
@@ -834,20 +974,20 @@
    <div class="container">
     <div class="badge">
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-      <span>Independently built &amp; globally shipped</span>
+      <span data-i18n="hero.badge">Independently built &amp; globally shipped</span>
     </div>
 
     <div class="headline">
-      <h1>Apps that ship.<br><span class="accent">Backends that scale.</span></h1>
+      <h1 data-i18n-html="hero.headline">Apps that ship.<br><span class="accent">Backends that scale.</span></h1>
     </div>
 
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="hero.desc">
       Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.
     </p>
 
     <div class="btn-row">
-      <a href="#apps" class="btn-primary" style="padding: 12px 24px;">Explore apps</a>
-      <a href="#contact" class="btn-outline">Contact us</a>
+      <a href="#apps" class="btn-primary" style="padding: 12px 24px;" data-i18n="hero.btn1">Explore apps</a>
+      <a href="#contact" class="btn-outline" data-i18n="hero.btn2">Contact us</a>
     </div>
 
     <div class="app-cards-row">
@@ -873,12 +1013,12 @@
   <section class="about" id="about">
    <div class="container">
     <div class="about-left">
-      <span class="overline">ABOUT US</span>
-      <h2 class="section-headline">We build software people actually use</h2>
-      <p class="body-text">
+      <span class="overline" data-i18n="about.overline">ABOUT US</span>
+      <h2 class="section-headline" data-i18n="about.headline">We build software people actually use</h2>
+      <p class="body-text" data-i18n="about.p1">
         Behind electrobits is a solo developer with a clear mission: build mobile apps that feel native, perform flawlessly, and solve real problems. Every project starts with deep user research and ends with software people genuinely enjoy using.
       </p>
-      <p class="body-text">
+      <p class="body-text" data-i18n="about.p2">
         On the backend, everything runs on Symfony — a proven PHP framework that delivers the reliability and scalability needed for production-grade platforms. No bloat, no shortcuts, just clean architecture from front to back.
       </p>
     </div>
@@ -886,21 +1026,21 @@
       <div class="stats-row">
         <div class="stat-card">
           <span class="value">20+</span>
-          <span class="label">Years of experience</span>
+          <span class="label" data-i18n="about.stat1">Years of experience</span>
         </div>
         <div class="stat-card">
           <span class="value">2</span>
-          <span class="label">Apps in development</span>
+          <span class="label" data-i18n="about.stat2">Apps in development</span>
         </div>
       </div>
       <div class="stats-row">
         <div class="stat-card">
           <span class="value">4.7&#9733;</span>
-          <span class="label">Average user rating</span>
+          <span class="label" data-i18n="about.stat3">Average user rating</span>
         </div>
         <div class="stat-card">
           <span class="value">Symfony</span>
-          <span class="label">Backend framework</span>
+          <span class="label" data-i18n="about.stat4">Backend framework</span>
         </div>
       </div>
     </div>
@@ -911,31 +1051,31 @@
   <section class="principles">
    <div class="container">
     <div class="header-group">
-      <span class="overline">WHAT WE STAND FOR</span>
-      <h2 class="section-headline" style="text-align: center;">Principles behind every product</h2>
-      <p class="section-subline">We apply the same standards to every piece of software we ship.</p>
+      <span class="overline" data-i18n="principles.overline">WHAT WE STAND FOR</span>
+      <h2 class="section-headline" style="text-align: center;" data-i18n="principles.headline">Principles behind every product</h2>
+      <p class="section-subline" data-i18n="principles.subline">We apply the same standards to every piece of software we ship.</p>
     </div>
     <div class="cards-row">
       <div class="principle-card">
         <div class="icon-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
-        <span class="title">Privacy first</span>
-        <p class="desc">Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.</p>
+        <span class="title" data-i18n="principles.c1.title">Privacy first</span>
+        <p class="desc" data-i18n="principles.c1.desc">Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.</p>
       </div>
       <div class="principle-card">
         <div class="icon-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
         </div>
-        <span class="title">Performance</span>
-        <p class="desc">Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.</p>
+        <span class="title" data-i18n="principles.c2.title">Performance</span>
+        <p class="desc" data-i18n="principles.c2.desc">Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.</p>
       </div>
       <div class="principle-card">
         <div class="icon-wrap">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
         </div>
-        <span class="title">Reliable support</span>
-        <p class="desc">Direct access to the developer. No support tickets lost in queues, no bots — real human help.</p>
+        <span class="title" data-i18n="principles.c3.title">Reliable support</span>
+        <p class="desc" data-i18n="principles.c3.desc">Direct access to the developer. No support tickets lost in queues, no bots — real human help.</p>
       </div>
     </div>
    </div>
@@ -945,19 +1085,19 @@
   <section class="products" id="apps">
    <div class="container">
     <div class="section-header">
-      <span class="overline">OUR APPS</span>
-      <h2 class="section-headline">Products available on Google Play</h2>
-      <p class="section-subline" style="text-align: left;">We build quality apps with a focus on performance, privacy, and user experience.</p>
+      <span class="overline" data-i18n="products.overline">OUR APPS</span>
+      <h2 class="section-headline" data-i18n="products.headline">Products available on Google Play</h2>
+      <p class="section-subline" style="text-align: left;" data-i18n="products.subline">We build quality apps with a focus on performance, privacy, and user experience.</p>
     </div>
     <div class="product-card">
       <img src="assets/images/deadpoint-logo-large.png" alt="Deadpoint" class="logo">
       <div class="right">
         <span class="prod-title">Deadpoint — Mobile App</span>
-        <p class="prod-desc">
+        <p class="prod-desc" data-i18n="products.p1.desc">
           Your personal climbing training assistant for iOS and Android. Track sessions, analyze progress, follow structured training plans, and push your climbing to the next level.
         </p>
         <div class="badge-row">
-          <span class="badge-pill accent">Coming Soon</span>
+          <span class="badge-pill accent" data-i18n="products.p1.badge1">Coming Soon</span>
           <span class="badge-pill outline">iOS &amp; Android</span>
         </div>
       </div>
@@ -966,11 +1106,11 @@
       <img src="assets/images/coach-logo-large.png" alt="Coach Platform" class="logo">
       <div class="right">
         <span class="prod-title">Deadpoint — Coach Platform</span>
-        <p class="prod-desc">
+        <p class="prod-desc" data-i18n="products.p2.desc">
           A dedicated web platform for climbing coaches to manage athletes, create training plans, track progress, and communicate — all powered by Symfony.
         </p>
         <div class="badge-row">
-          <span class="badge-pill accent">Web Platform</span>
+          <span class="badge-pill accent" data-i18n="products.p2.badge1">Web Platform</span>
           <span class="badge-pill outline">Symfony</span>
         </div>
       </div>
@@ -981,11 +1121,11 @@
   <!-- Contact -->
   <section class="contact" id="contact">
    <div class="container">
-    <span class="overline">CONTACT</span>
-    <h2 class="section-headline" style="text-align: center;">Get in touch</h2>
+    <span class="overline" data-i18n="contact.overline">CONTACT</span>
+    <h2 class="section-headline" style="text-align: center;" data-i18n="contact.headline">Get in touch</h2>
     <div class="contact-card">
-      <span class="card-title">We'd love to hear from you</span>
-      <p class="card-desc">
+      <span class="card-title" data-i18n="contact.title">We'd love to hear from you</span>
+      <p class="card-desc" data-i18n="contact.desc">
         Have a question about our software, apps, or partnership inquiries? Reach out and we'll get back to you directly.
       </p>
       <a href="mailto:hello@electrobits.io" class="email-link">
@@ -1000,7 +1140,7 @@
         </div>
         <div class="info-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Remote, EU</span>
+          <span data-i18n="contact.location">Wrocław, Poland</span>
         </div>
         <div class="info-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
@@ -1016,18 +1156,132 @@
    <div class="container">
     <div class="footer-border"></div>
     <div class="footer-row">
-      <span class="footer-copy">&copy; 2026 electrobits. All rights reserved.</span>
+      <span class="footer-copy">&copy; 2026 electrobits. <span data-i18n="footer.rights">All rights reserved.</span></span>
       <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#apps">Apps</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#apps" data-i18n="nav.apps">Apps</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
    </div>
   </footer>
 
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-header">
+      <p class="cookie-text">
+        <span data-i18n="cookie.text">We use anonymized tracking to improve our website.</span> <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+      </p>
+      <button class="cookie-close" onclick="dismissCookies('declined')" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn-decline" onclick="dismissCookies('declined')" data-i18n="cookie.decline">Decline</button>
+      <button class="btn-accept" onclick="dismissCookies('accepted')" data-i18n="cookie.accept">OK</button>
+    </div>
+  </div>
+
   <script>
+    const translations = {
+      en: {
+        "nav.about": "About", "nav.apps": "Apps", "nav.contact": "Contact",
+        "nav.privacy": "Privacy Policy", "nav.cta": "Get in touch",
+        "hero.badge": "Independently built & globally shipped",
+        "hero.headline": 'Apps that ship.<br><span class="accent">Backends that scale.</span>',
+        "hero.desc": "Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.",
+        "hero.btn1": "Explore apps", "hero.btn2": "Contact us",
+        "about.overline": "ABOUT US",
+        "about.headline": "We build software people actually use",
+        "about.p1": "Behind electrobits is a solo developer with a clear mission: build mobile apps that feel native, perform flawlessly, and solve real problems. Every project starts with deep user research and ends with software people genuinely enjoy using.",
+        "about.p2": "On the backend, everything runs on Symfony — a proven PHP framework that delivers the reliability and scalability needed for production-grade platforms. No bloat, no shortcuts, just clean architecture from front to back.",
+        "about.stat1": "Years of experience", "about.stat2": "Apps in development",
+        "about.stat3": "Average user rating", "about.stat4": "Backend framework",
+        "principles.overline": "WHAT WE STAND FOR",
+        "principles.headline": "Principles behind every product",
+        "principles.subline": "We apply the same standards to every piece of software we ship.",
+        "principles.c1.title": "Privacy first",
+        "principles.c1.desc": "Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.",
+        "principles.c2.title": "Performance",
+        "principles.c2.desc": "Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.",
+        "principles.c3.title": "Reliable support",
+        "principles.c3.desc": "Direct access to the developer. No support tickets lost in queues, no bots — real human help.",
+        "products.overline": "OUR APPS",
+        "products.headline": "Products available on Google Play",
+        "products.subline": "We build quality apps with a focus on performance, privacy, and user experience.",
+        "products.p1.desc": "Your personal climbing training assistant for iOS and Android. Track sessions, analyze progress, follow structured training plans, and push your climbing to the next level.",
+        "products.p1.badge1": "Coming Soon",
+        "products.p2.desc": "A dedicated web platform for climbing coaches to manage athletes, create training plans, track progress, and communicate — all powered by Symfony.",
+        "products.p2.badge1": "Web Platform",
+        "contact.overline": "CONTACT", "contact.headline": "Get in touch",
+        "contact.title": "We'd love to hear from you",
+        "contact.desc": "Have a question about our software, apps, or partnership inquiries? Reach out and we'll get back to you directly.",
+        "contact.location": "Wrocław, Poland",
+        "footer.rights": "All rights reserved.",
+        "cookie.text": "We use anonymized tracking to improve our website.",
+        "cookie.decline": "Decline", "cookie.accept": "OK"
+      },
+      pl: {
+        "nav.about": "O nas", "nav.apps": "Aplikacje", "nav.contact": "Kontakt",
+        "nav.privacy": "Polityka prywatności", "nav.cta": "Napisz do nas",
+        "hero.badge": "Niezależnie tworzone i globalnie dostarczane",
+        "hero.headline": 'Aplikacje, które działają.<br><span class="accent">Backendy, które skalują.</span>',
+        "hero.desc": "Niezależnie tworzone aplikacje mobilne na iOS i Androida, wspierane solidną infrastrukturą Symfony. Budowane przez jednego programistę, dostarczane na cały świat.",
+        "hero.btn1": "Zobacz aplikacje", "hero.btn2": "Skontaktuj się",
+        "about.overline": "O NAS",
+        "about.headline": "Tworzymy oprogramowanie, z którego ludzie naprawdę korzystają",
+        "about.p1": "Za electrobits stoi jeden programista z jasną misją: tworzyć aplikacje mobilne, które działają natywnie, są niezawodne i rozwiązują realne problemy. Każdy projekt zaczyna się od dogłębnego researchu i kończy oprogramowaniem, z którego ludzie naprawdę chętnie korzystają.",
+        "about.p2": "Na backendzie wszystko działa na Symfony — sprawdzonym frameworku PHP, który zapewnia niezawodność i skalowalność potrzebną dla platform produkcyjnych. Bez zbędnego kodu, bez kompromisów, tylko czysta architektura.",
+        "about.stat1": "Lat doświadczenia", "about.stat2": "Aplikacje w rozwoju",
+        "about.stat3": "Średnia ocena użytkowników", "about.stat4": "Framework backendowy",
+        "principles.overline": "NASZE WARTOŚCI",
+        "principles.headline": "Zasady stojące za każdym produktem",
+        "principles.subline": "Te same standardy stosujemy do każdego oprogramowania, które tworzymy.",
+        "principles.c1.title": "Prywatność przede wszystkim",
+        "principles.c1.desc": "Twoje dane należą do Ciebie. Nigdy ich nie sprzedajemy, nie udostępniamy ani nie wykorzystujemy do reklam. Zgodność z RODO z założenia.",
+        "principles.c2.title": "Wydajność",
+        "principles.c2.desc": "Każda funkcja jest zoptymalizowana. Dbamy o czasy ładowania i płynne UX, bo wolne oprogramowanie traci użytkowników.",
+        "principles.c3.title": "Niezawodne wsparcie",
+        "principles.c3.desc": "Bezpośredni kontakt z programistą. Żadnych zgłoszeń gubiących się w kolejkach, żadnych botów — prawdziwa ludzka pomoc.",
+        "products.overline": "NASZE APLIKACJE",
+        "products.headline": "Produkty dostępne w Google Play",
+        "products.subline": "Tworzymy aplikacje najwyższej jakości z naciskiem na wydajność, prywatność i doświadczenie użytkownika.",
+        "products.p1.desc": "Twój osobisty asystent treningowy do wspinaczki na iOS i Androida. Śledź sesje, analizuj postępy, realizuj plany treningowe i przenieś swoją wspinaczkę na wyższy poziom.",
+        "products.p1.badge1": "Wkrótce",
+        "products.p2.desc": "Dedykowana platforma webowa dla trenerów wspinaczki do zarządzania zawodnikami, tworzenia planów treningowych, śledzenia postępów i komunikacji — wszystko napędzane przez Symfony.",
+        "products.p2.badge1": "Platforma webowa",
+        "contact.overline": "KONTAKT", "contact.headline": "Skontaktuj się",
+        "contact.title": "Chętnie od Ciebie usłyszymy",
+        "contact.desc": "Masz pytanie dotyczące naszego oprogramowania, aplikacji lub współpracy? Napisz, a odezwiemy się bezpośrednio.",
+        "contact.location": "Wrocław, Polska",
+        "footer.rights": "Wszelkie prawa zastrzeżone.",
+        "cookie.text": "Używamy zanonimizowanego śledzenia, aby ulepszać naszą stronę.",
+        "cookie.decline": "Odrzuć", "cookie.accept": "OK"
+      }
+    };
+
+    const htmlKeys = ['hero.headline'];
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-pl').classList.toggle('active', lang === 'pl');
+    }
+
     const themes = ['light', 'dark', 'catppuccin-latte', 'catppuccin-mocha'];
 
     function toggleTheme() {
@@ -1046,6 +1300,22 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+
+    (function() {
+      var saved = localStorage.getItem('lang');
+      if (saved && translations[saved]) setLang(saved);
+    })();
+
+    function dismissCookies(choice) {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      localStorage.setItem('cookie-consent', choice);
+    }
+
+    (function() {
+      if (localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookieBanner').classList.add('hidden');
       }
     })();
   </script>

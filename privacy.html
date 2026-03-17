@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — electrobits</title>
+  <meta name="description" content="Privacy Policy for electrobits.io">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #6366F1;
+      --accent-bg: #6366F1;
+      --accent-text: #6366F1;
+      --badge-bg: #EEF2FF;
+      --badge-text: #6366F1;
+      --bg-card: #FFFFFF;
+      --bg-page: #FFFFFF;
+      --bg-section-alt: #F8F9FB;
+      --border-card: #E5E7EB;
+      --border-subtle: #F0F0F0;
+      --btn-outline-border: #D1D5DB;
+      --btn-primary-text: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #818CF8; --accent-bg: #6366F1; --accent-text: #A5B4FC;
+        --badge-bg: #1E1B4B; --badge-text: #A5B4FC; --bg-card: #111827;
+        --bg-page: #0B0F19; --bg-section-alt: #0F1525; --border-card: #1F2937;
+        --border-subtle: #1A1F2E; --btn-outline-border: #374151;
+        --btn-primary-text: #FFFFFF; --text-muted: #6B7280;
+        --text-primary: #FFFFFF; --text-secondary: #9CA3AF;
+      }
+    }
+
+    [data-theme="light"] {
+      --accent: #6366F1; --accent-bg: #6366F1; --accent-text: #6366F1;
+      --badge-bg: #EEF2FF; --badge-text: #6366F1; --bg-card: #FFFFFF;
+      --bg-page: #FFFFFF; --bg-section-alt: #F8F9FB; --border-card: #E5E7EB;
+      --border-subtle: #F0F0F0; --btn-outline-border: #D1D5DB;
+      --btn-primary-text: #FFFFFF; --text-muted: #9CA3AF;
+      --text-primary: #111827; --text-secondary: #6B7280;
+    }
+
+    [data-theme="dark"] {
+      --accent: #818CF8; --accent-bg: #6366F1; --accent-text: #A5B4FC;
+      --badge-bg: #1E1B4B; --badge-text: #A5B4FC; --bg-card: #111827;
+      --bg-page: #0B0F19; --bg-section-alt: #0F1525; --border-card: #1F2937;
+      --border-subtle: #1A1F2E; --btn-outline-border: #374151;
+      --btn-primary-text: #FFFFFF; --text-muted: #6B7280;
+      --text-primary: #FFFFFF; --text-secondary: #9CA3AF;
+    }
+
+    [data-theme="catppuccin-latte"] {
+      --accent: #8839ef; --accent-bg: #8839ef; --accent-text: #8839ef;
+      --badge-bg: #e6e9ef; --badge-text: #8839ef; --bg-card: #eff1f5;
+      --bg-page: #eff1f5; --bg-section-alt: #e6e9ef; --border-card: #bcc0cc;
+      --border-subtle: #ccd0da; --btn-outline-border: #acb0be;
+      --btn-primary-text: #eff1f5; --text-muted: #9ca0b0;
+      --text-primary: #4c4f69; --text-secondary: #6c6f85;
+    }
+
+    [data-theme="catppuccin-mocha"] {
+      --accent: #cba6f7; --accent-bg: #cba6f7; --accent-text: #cba6f7;
+      --badge-bg: #313244; --badge-text: #cba6f7; --bg-card: #313244;
+      --bg-page: #1e1e2e; --bg-section-alt: #181825; --border-card: #45475a;
+      --border-subtle: #313244; --btn-outline-border: #585b70;
+      --btn-primary-text: #1e1e2e; --text-muted: #6c7086;
+      --text-primary: #cdd6f4; --text-secondary: #a6adc8;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { max-width: 1280px; margin: 0 auto; width: 100%; }
+
+    .header { background: var(--bg-page); }
+    .header > .container {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 80px;
+    }
+    .brand { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+    .nav-right { display: flex; align-items: center; gap: 32px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .lang-switch {
+      display: flex; gap: 4px; font-size: 13px; font-weight: 500;
+      color: var(--text-muted); align-items: center;
+    }
+    .lang-switch button {
+      background: none; border: none; font-family: inherit;
+      font-size: 13px; font-weight: 500; color: var(--text-muted);
+      cursor: pointer; padding: 4px 6px; border-radius: 4px; transition: color 0.2s;
+    }
+    .lang-switch button:hover { color: var(--text-primary); }
+    .lang-switch button.active { color: var(--text-primary); }
+
+    .content { background: var(--bg-page); }
+    .content > .container { padding: 60px 80px 80px; max-width: 800px; }
+
+    .content h1 {
+      font-size: 36px; font-weight: 700; letter-spacing: -0.5px;
+      color: var(--text-primary); margin-bottom: 8px;
+    }
+    .content .updated {
+      font-size: 13px; color: var(--text-muted); margin-bottom: 48px;
+    }
+    .content h2 {
+      font-size: 20px; font-weight: 600; color: var(--text-primary);
+      margin: 40px 0 16px;
+    }
+    .content h2:first-of-type { margin-top: 0; }
+    .content p {
+      font-size: 15px; line-height: 1.7; color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .content ul {
+      margin: 0 0 12px 20px; color: var(--text-secondary);
+      font-size: 15px; line-height: 1.7;
+    }
+    .content a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; }
+
+    .footer { background: var(--bg-page); }
+    .footer > .container { padding: 0 80px 24px; }
+    .footer-border { height: 1px; background: var(--border-subtle); margin-bottom: 24px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-nav { display: flex; gap: 24px; }
+    .footer-nav a { font-size: 13px; font-weight: 500; color: var(--text-secondary); transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--text-primary); }
+
+    @media (max-width: 768px) {
+      .header > .container { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .content > .container { padding: 40px 24px 60px; }
+      .content h1 { font-size: 28px; }
+      .footer > .container { padding: 0 24px 24px; }
+      .footer-row { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="brand">electrobits</a>
+      <nav class="nav-right">
+        <div class="nav-links">
+          <a href="index.html#about" data-i18n="nav.about">About</a>
+          <a href="index.html#apps" data-i18n="nav.apps">Apps</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="lang-switch">
+          <button onclick="setLang('en')" id="lang-en" class="active">EN</button>
+          <span>/</span>
+          <button onclick="setLang('pl')" id="lang-pl">PL</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <h1 data-i18n="privacy.title">Privacy Policy</h1>
+      <p class="updated" data-i18n="privacy.updated">Last updated: March 2026</p>
+
+      <h2 data-i18n="privacy.s1.title">1. Data Protection at a Glance</h2>
+      <p data-i18n="privacy.s1.p1">The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you. For detailed information on the subject of data protection, please refer to the sections below.</p>
+
+      <h2 data-i18n="privacy.s2.title">2. Responsible Party</h2>
+      <p data-i18n="privacy.s2.p1">The party responsible for data processing on this website is:</p>
+      <p>Electrobits Michał Krowiarz<br>ul. Himalajska 17/5<br>50-572 Wrocław, Poland<br>Email: hello@electrobits.io<br><span data-i18n="privacy.s2.phone">Phone</span>: +48 664 701 374</p>
+      <p data-i18n="privacy.s2.p2">The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, email addresses, etc.).</p>
+
+      <h2 data-i18n="privacy.s3.title">3. Data Collection on This Website</h2>
+      <p data-i18n="privacy.s3.p1">When you visit this website, our hosting provider automatically collects and stores information in server log files that your browser transmits to us. These include:</p>
+      <ul>
+        <li data-i18n="privacy.s3.l1">Browser type and version</li>
+        <li data-i18n="privacy.s3.l2">Operating system used</li>
+        <li data-i18n="privacy.s3.l3">Referrer URL</li>
+        <li data-i18n="privacy.s3.l4">Hostname of the accessing computer</li>
+        <li data-i18n="privacy.s3.l5">Time of the server request</li>
+        <li data-i18n="privacy.s3.l6">IP address</li>
+      </ul>
+      <p data-i18n="privacy.s3.p2">This data is not merged with other data sources. The basis for data processing is Art. 6(1)(f) GDPR, which permits processing for the purpose of fulfilling a contract or pre-contractual measures.</p>
+
+      <h2 data-i18n="privacy.s4.title">4. Hosting</h2>
+      <p data-i18n="privacy.s4.p1">This website is hosted on GitHub Pages. When you visit our pages, your IP address and other data are transmitted to GitHub's servers. For more information, please refer to GitHub's privacy policy.</p>
+
+      <h2 data-i18n="privacy.s5.title">5. Cookies and Local Storage</h2>
+      <p data-i18n="privacy.s5.p1">This website uses local storage in your browser to save your theme preference and language selection. No tracking cookies are used. No personal data is collected or stored through these mechanisms.</p>
+
+      <h2 data-i18n="privacy.s6.title">6. Analytics</h2>
+      <p data-i18n="privacy.s6.p1">This website does not currently use any analytics or tracking services. Should this change in the future, this privacy policy will be updated accordingly and your consent will be requested.</p>
+
+      <h2 data-i18n="privacy.s7.title">7. Your Rights</h2>
+      <p data-i18n="privacy.s7.p1">You have the right to request information about the personal data we hold about you at any time, free of charge. You also have the right to request correction, deletion, or restriction of processing of your personal data, as well as the right to data portability. Furthermore, you have the right to withdraw any consent given at any time.</p>
+      <p data-i18n="privacy.s7.p2">If you believe that the processing of your data violates data protection law, you have the right to lodge a complaint with a supervisory authority.</p>
+
+      <h2 data-i18n="privacy.s8.title">8. Changes to This Privacy Policy</h2>
+      <p data-i18n="privacy.s8.p1">We reserve the right to update this privacy policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. The latest version will always be available on this page.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-border"></div>
+      <div class="footer-row">
+        <span class="footer-copy">&copy; 2026 electrobits. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <nav class="footer-nav">
+          <a href="index.html#about" data-i18n="nav.about">About</a>
+          <a href="index.html#apps" data-i18n="nav.apps">Apps</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        "nav.about": "About",
+        "nav.apps": "Apps",
+        "nav.contact": "Contact",
+        "nav.privacy": "Privacy Policy",
+        "footer.rights": "All rights reserved.",
+        "privacy.title": "Privacy Policy",
+        "privacy.updated": "Last updated: March 2026",
+        "privacy.s1.title": "1. Data Protection at a Glance",
+        "privacy.s1.p1": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you. For detailed information on the subject of data protection, please refer to the sections below.",
+        "privacy.s2.title": "2. Responsible Party",
+        "privacy.s2.p1": "The party responsible for data processing on this website is:",
+        "privacy.s2.phone": "Phone",
+        "privacy.s2.p2": "The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, email addresses, etc.).",
+        "privacy.s3.title": "3. Data Collection on This Website",
+        "privacy.s3.p1": "When you visit this website, our hosting provider automatically collects and stores information in server log files that your browser transmits to us. These include:",
+        "privacy.s3.l1": "Browser type and version",
+        "privacy.s3.l2": "Operating system used",
+        "privacy.s3.l3": "Referrer URL",
+        "privacy.s3.l4": "Hostname of the accessing computer",
+        "privacy.s3.l5": "Time of the server request",
+        "privacy.s3.l6": "IP address",
+        "privacy.s3.p2": "This data is not merged with other data sources. The basis for data processing is Art. 6(1)(f) GDPR, which permits processing for the purpose of fulfilling a contract or pre-contractual measures.",
+        "privacy.s4.title": "4. Hosting",
+        "privacy.s4.p1": "This website is hosted on GitHub Pages. When you visit our pages, your IP address and other data are transmitted to GitHub's servers. For more information, please refer to GitHub's privacy policy.",
+        "privacy.s5.title": "5. Cookies and Local Storage",
+        "privacy.s5.p1": "This website uses local storage in your browser to save your theme preference and language selection. No tracking cookies are used. No personal data is collected or stored through these mechanisms.",
+        "privacy.s6.title": "6. Analytics",
+        "privacy.s6.p1": "This website does not currently use any analytics or tracking services. Should this change in the future, this privacy policy will be updated accordingly and your consent will be requested.",
+        "privacy.s7.title": "7. Your Rights",
+        "privacy.s7.p1": "You have the right to request information about the personal data we hold about you at any time, free of charge. You also have the right to request correction, deletion, or restriction of processing of your personal data, as well as the right to data portability. Furthermore, you have the right to withdraw any consent given at any time.",
+        "privacy.s7.p2": "If you believe that the processing of your data violates data protection law, you have the right to lodge a complaint with a supervisory authority.",
+        "privacy.s8.title": "8. Changes to This Privacy Policy",
+        "privacy.s8.p1": "We reserve the right to update this privacy policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. The latest version will always be available on this page."
+      },
+      pl: {
+        "nav.about": "O nas",
+        "nav.apps": "Aplikacje",
+        "nav.contact": "Kontakt",
+        "nav.privacy": "Polityka prywatności",
+        "footer.rights": "Wszelkie prawa zastrzeżone.",
+        "privacy.title": "Polityka prywatności",
+        "privacy.updated": "Ostatnia aktualizacja: marzec 2026",
+        "privacy.s1.title": "1. Ochrona danych w skrócie",
+        "privacy.s1.p1": "Poniższe informacje stanowią prosty przegląd tego, co dzieje się z Twoimi danymi osobowymi podczas odwiedzania tej strony internetowej. Dane osobowe to wszelkie dane, za pomocą których można Cię osobiście zidentyfikować. Szczegółowe informacje na temat ochrony danych znajdziesz w poniższych sekcjach.",
+        "privacy.s2.title": "2. Administrator danych",
+        "privacy.s2.p1": "Administratorem danych osobowych przetwarzanych na tej stronie jest:",
+        "privacy.s2.phone": "Telefon",
+        "privacy.s2.p2": "Administrator to osoba fizyczna lub prawna, która samodzielnie lub wspólnie z innymi ustala cele i sposoby przetwarzania danych osobowych (np. imiona i nazwiska, adresy e-mail itp.).",
+        "privacy.s3.title": "3. Gromadzenie danych na tej stronie",
+        "privacy.s3.p1": "Podczas odwiedzania tej strony nasz dostawca hostingu automatycznie zbiera i przechowuje informacje w plikach dziennika serwera, które Twoja przeglądarka automatycznie nam przekazuje. Obejmują one:",
+        "privacy.s3.l1": "Typ i wersja przeglądarki",
+        "privacy.s3.l2": "Używany system operacyjny",
+        "privacy.s3.l3": "Adres URL strony odsyłającej",
+        "privacy.s3.l4": "Nazwa hosta komputera uzyskującego dostęp",
+        "privacy.s3.l5": "Czas zapytania do serwera",
+        "privacy.s3.l6": "Adres IP",
+        "privacy.s3.p2": "Dane te nie są łączone z innymi źródłami danych. Podstawą przetwarzania danych jest art. 6 ust. 1 lit. f RODO, który zezwala na przetwarzanie w celu realizacji umowy lub działań przedumownych.",
+        "privacy.s4.title": "4. Hosting",
+        "privacy.s4.p1": "Ta strona internetowa jest hostowana na GitHub Pages. Podczas odwiedzania naszych stron Twój adres IP i inne dane są przesyłane na serwery GitHub. Więcej informacji znajdziesz w polityce prywatności GitHub.",
+        "privacy.s5.title": "5. Pliki cookie i pamięć lokalna",
+        "privacy.s5.p1": "Ta strona wykorzystuje pamięć lokalną przeglądarki do zapisywania preferencji motywu i wyboru języka. Nie są używane pliki cookie śledzące. Za pomocą tych mechanizmów nie są gromadzone ani przechowywane żadne dane osobowe.",
+        "privacy.s6.title": "6. Analityka",
+        "privacy.s6.p1": "Ta strona nie korzysta obecnie z żadnych usług analitycznych ani śledzących. W przypadku zmiany tej sytuacji niniejsza polityka prywatności zostanie odpowiednio zaktualizowana, a Twoja zgoda zostanie wcześniej uzyskana.",
+        "privacy.s7.title": "7. Twoje prawa",
+        "privacy.s7.p1": "Masz prawo w dowolnym momencie bezpłatnie zażądać informacji o przechowywanych przez nas danych osobowych. Masz również prawo żądać poprawienia, usunięcia lub ograniczenia przetwarzania swoich danych osobowych, a także prawo do przenoszenia danych. Ponadto masz prawo cofnąć udzieloną zgodę w dowolnym momencie.",
+        "privacy.s7.p2": "Jeśli uważasz, że przetwarzanie Twoich danych narusza prawo ochrony danych, masz prawo złożyć skargę do organu nadzorczego.",
+        "privacy.s8.title": "8. Zmiany w polityce prywatności",
+        "privacy.s8.p1": "Zastrzegamy sobie prawo do aktualizacji niniejszej polityki prywatności w celu odzwierciedlenia zmian w naszych praktykach lub z innych powodów operacyjnych, prawnych bądź regulacyjnych. Najnowsza wersja będzie zawsze dostępna na tej stronie."
+      }
+    };
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-pl').classList.toggle('active', lang === 'pl');
+    }
+
+    (function() {
+      const saved = localStorage.getItem('lang');
+      if (saved && translations[saved]) setLang(saved);
+    })();
+
+    // Theme
+    const themes = ['light', 'dark', 'catppuccin-latte', 'catppuccin-mocha'];
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved && themes.includes(saved)) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</body>
+</html>
