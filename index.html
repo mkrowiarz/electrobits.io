@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>electrobits — Apps that ship. Backends that scale.</title>
+  <meta name="description" content="Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #6366F1;
+      --accent-bg: #6366F1;
+      --accent-text: #6366F1;
+      --badge-bg: #EEF2FF;
+      --badge-text: #6366F1;
+      --bg-card: #FFFFFF;
+      --bg-page: #FFFFFF;
+      --bg-section-alt: #F8F9FB;
+      --border-card: #E5E7EB;
+      --border-subtle: #F0F0F0;
+      --btn-outline-border: #D1D5DB;
+      --btn-primary-text: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #818CF8;
+        --accent-bg: #6366F1;
+        --accent-text: #A5B4FC;
+        --badge-bg: #1E1B4B;
+        --badge-text: #A5B4FC;
+        --bg-card: #111827;
+        --bg-page: #0B0F19;
+        --bg-section-alt: #0F1525;
+        --border-card: #1F2937;
+        --border-subtle: #1A1F2E;
+        --btn-outline-border: #374151;
+        --btn-primary-text: #FFFFFF;
+        --text-muted: #6B7280;
+        --text-primary: #FFFFFF;
+        --text-secondary: #9CA3AF;
+      }
+    }
+
+    [data-theme="light"] {
+      --accent: #6366F1;
+      --accent-bg: #6366F1;
+      --accent-text: #6366F1;
+      --badge-bg: #EEF2FF;
+      --badge-text: #6366F1;
+      --bg-card: #FFFFFF;
+      --bg-page: #FFFFFF;
+      --bg-section-alt: #F8F9FB;
+      --border-card: #E5E7EB;
+      --border-subtle: #F0F0F0;
+      --btn-outline-border: #D1D5DB;
+      --btn-primary-text: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+    }
+
+    [data-theme="dark"] {
+      --accent: #818CF8;
+      --accent-bg: #6366F1;
+      --accent-text: #A5B4FC;
+      --badge-bg: #1E1B4B;
+      --badge-text: #A5B4FC;
+      --bg-card: #111827;
+      --bg-page: #0B0F19;
+      --bg-section-alt: #0F1525;
+      --border-card: #1F2937;
+      --border-subtle: #1A1F2E;
+      --btn-outline-border: #374151;
+      --btn-primary-text: #FFFFFF;
+      --text-muted: #6B7280;
+      --text-primary: #FFFFFF;
+      --text-secondary: #9CA3AF;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .header {
+      background: var(--bg-page);
+    }
+
+    .header > .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 80px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-bg);
+      color: var(--btn-primary-text);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--btn-outline-border);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-secondary);
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--bg-page);
+    }
+
+    .hero > .container {
+      padding: 60px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--badge-bg);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      width: fit-content;
+    }
+
+    .badge svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent-text);
+    }
+
+    .badge span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent-text);
+    }
+
+    .headline h1 {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      color: var(--text-primary);
+    }
+
+    .headline .accent {
+      font-weight: 500;
+      color: var(--accent-text);
+    }
+
+    .hero-desc {
+      max-width: 500px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .btn-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .app-preview {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 12px 16px;
+      width: fit-content;
+    }
+
+    .app-preview img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .app-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .app-info .name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .app-info .sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    /* About */
+    .about {
+      background: var(--bg-page);
+    }
+
+    .about > .container {
+      display: flex;
+      gap: 80px;
+      padding: 80px;
+    }
+
+    .about-left {
+      width: 500px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .overline {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--accent-text);
+      text-transform: uppercase;
+    }
+
+    .section-headline {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+    }
+
+    .body-text {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .about-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 16px;
+    }
+
+    .stat-card {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .stat-card .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .stat-card .label {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    /* Principles */
+    .principles {
+      background: var(--bg-section-alt);
+    }
+
+    .principles > .container {
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .principles .header-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .section-subline {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .cards-row {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .principle-card {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .icon-wrap {
+      width: 40px;
+      height: 40px;
+      background: var(--badge-bg);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-wrap svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-text);
+    }
+
+    .principle-card .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .principle-card .desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* Products */
+    .products {
+      background: var(--bg-page);
+    }
+
+    .products > .container {
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .products .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-card {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .product-card .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .product-card .right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-card .prod-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .product-card .prod-desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 600px;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .badge-pill {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .badge-pill.accent {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+    }
+
+    .badge-pill.outline {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-secondary);
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--bg-section-alt);
+    }
+
+    .contact > .container {
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .contact-card {
+      width: 700px;
+      max-width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 40px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-card .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: center;
+    }
+
+    .contact-card .card-desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--badge-bg);
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: opacity 0.2s;
+    }
+
+    .email-link:hover {
+      opacity: 0.85;
+    }
+
+    .email-link svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent-text);
+    }
+
+    .email-link span {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent-text);
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-card);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      width: 100%;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-item svg {
+      width: 14px;
+      height: 14px;
+      color: var(--text-muted);
+    }
+
+    .info-item span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--bg-page);
+    }
+
+    .footer > .container {
+      padding: 0 80px 24px;
+    }
+
+    .footer-border {
+      height: 1px;
+      background: var(--border-subtle);
+      margin-bottom: 24px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border-card);
+      border-radius: 8px;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+    }
+
+    .theme-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about > .container {
+        flex-direction: column;
+        gap: 48px;
+      }
+      .about-left {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header > .container {
+        padding: 16px 24px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero > .container {
+        padding: 40px 24px 60px;
+      }
+      .headline h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+      }
+      .about > .container {
+        padding: 48px 24px;
+      }
+      .about-left {
+        width: 100%;
+      }
+      .section-headline {
+        font-size: 28px;
+      }
+      .stats-row {
+        flex-direction: column;
+      }
+      .principles > .container {
+        padding: 48px 24px;
+      }
+      .cards-row {
+        flex-direction: column;
+      }
+      .products > .container {
+        padding: 48px 24px;
+      }
+      .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .product-card .prod-desc {
+        max-width: 100%;
+      }
+      .contact > .container {
+        padding: 48px 24px;
+      }
+      .contact-card {
+        padding: 32px 24px;
+      }
+      .info-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .footer > .container {
+        padding: 0 24px 24px;
+      }
+      .footer-row {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+   <div class="container">
+    <a href="#" class="brand">electrobits</a>
+    <nav class="nav-right">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#apps">Apps</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+      </button>
+      <a href="#contact" class="btn-primary">Get in touch</a>
+    </nav>
+   </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+   <div class="container">
+    <div class="badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+      <span>Independently built &amp; globally shipped</span>
+    </div>
+
+    <div class="headline">
+      <h1>Apps that ship.<br><span class="accent">Backends that scale.</span></h1>
+    </div>
+
+    <p class="hero-desc">
+      Independently crafted mobile applications for iOS and Android, powered by robust Symfony infrastructure. Built by one developer, shipped worldwide.
+    </p>
+
+    <div class="btn-row">
+      <a href="#apps" class="btn-primary" style="padding: 12px 24px;">Explore apps</a>
+      <a href="#contact" class="btn-outline">Contact us</a>
+    </div>
+
+    <div class="app-preview">
+      <img src="assets/images/deadpoint-logo.png" alt="Deadpoint app logo">
+      <div class="app-info">
+        <span class="name">Deadpoint</span>
+        <span class="sub">iOS, Android</span>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+   <div class="container">
+    <div class="about-left">
+      <span class="overline">ABOUT US</span>
+      <h2 class="section-headline">We build software people actually use</h2>
+      <p class="body-text">
+        Behind electrobits is a solo developer with a clear mission: build mobile apps that feel native, perform flawlessly, and solve real problems. Every project starts with deep user research and ends with software people genuinely enjoy using.
+      </p>
+      <p class="body-text">
+        On the backend, everything runs on Symfony — a proven PHP framework that delivers the reliability and scalability needed for production-grade platforms. No bloat, no shortcuts, just clean architecture from front to back.
+      </p>
+    </div>
+    <div class="about-right">
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="value">5+</span>
+          <span class="label">Years of experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="value">2</span>
+          <span class="label">Apps in development</span>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="value">4.7&#9733;</span>
+          <span class="label">Average user rating</span>
+        </div>
+        <div class="stat-card">
+          <span class="value">Symfony</span>
+          <span class="label">Backend framework</span>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="principles">
+   <div class="container">
+    <div class="header-group">
+      <span class="overline">WHAT WE STAND FOR</span>
+      <h2 class="section-headline" style="text-align: center;">Principles behind every product</h2>
+      <p class="section-subline">We apply the same standards to every piece of software we ship.</p>
+    </div>
+    <div class="cards-row">
+      <div class="principle-card">
+        <div class="icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <span class="title">Privacy first</span>
+        <p class="desc">Your data stays yours. We never sell it, share it, or use it for ads. GDPR compliant by design.</p>
+      </div>
+      <div class="principle-card">
+        <div class="icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+        </div>
+        <span class="title">Performance</span>
+        <p class="desc">Every feature is optimized. We obsess over load times and smooth UX because slow software loses users.</p>
+      </div>
+      <div class="principle-card">
+        <div class="icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+        </div>
+        <span class="title">Reliable support</span>
+        <p class="desc">Direct access to the developer. No support tickets lost in queues, no bots — real human help.</p>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="apps">
+   <div class="container">
+    <div class="section-header">
+      <span class="overline">OUR APPS</span>
+      <h2 class="section-headline">Products available on Google Play</h2>
+      <p class="section-subline" style="text-align: left;">We build quality apps with a focus on performance, privacy, and user experience.</p>
+    </div>
+    <div class="product-card">
+      <img src="assets/images/deadpoint-logo-large.png" alt="Deadpoint" class="logo">
+      <div class="right">
+        <span class="prod-title">Deadpoint</span>
+        <p class="prod-desc">
+          Your personal climbing training assistant. Track your sessions, analyze progress, and follow structured training plans. Includes a coach platform for trainers to manage athletes remotely.
+        </p>
+        <div class="badge-row">
+          <span class="badge-pill accent">Coming Soon</span>
+          <span class="badge-pill outline">iOS &amp; Android</span>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+   <div class="container">
+    <span class="overline">CONTACT</span>
+    <h2 class="section-headline" style="text-align: center;">Get in touch</h2>
+    <div class="contact-card">
+      <span class="card-title">We'd love to hear from you</span>
+      <p class="card-desc">
+        Have a question about our software, apps, or partnership inquiries? Reach out and we'll get back to you directly.
+      </p>
+      <a href="mailto:hello@electrobits.io" class="email-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>hello@electrobits.io</span>
+      </a>
+      <div class="divider"></div>
+      <div class="info-row">
+        <div class="info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          <span>electrobits</span>
+        </div>
+        <div class="info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Remote, EU</span>
+        </div>
+        <div class="info-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <span>electrobits.io</span>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-border"></div>
+    <div class="footer-row">
+      <span class="footer-copy">&copy; 2025 electrobits. All rights reserved.</span>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#apps">Apps</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+   </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      if (current === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</body>
+</html>
