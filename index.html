@@ -83,6 +83,42 @@
       --text-secondary: #9CA3AF;
     }
 
+    [data-theme="catppuccin-latte"] {
+      --accent: #8839ef;
+      --accent-bg: #8839ef;
+      --accent-text: #8839ef;
+      --badge-bg: #e6e9ef;
+      --badge-text: #8839ef;
+      --bg-card: #eff1f5;
+      --bg-page: #eff1f5;
+      --bg-section-alt: #e6e9ef;
+      --border-card: #bcc0cc;
+      --border-subtle: #ccd0da;
+      --btn-outline-border: #acb0be;
+      --btn-primary-text: #eff1f5;
+      --text-muted: #9ca0b0;
+      --text-primary: #4c4f69;
+      --text-secondary: #6c6f85;
+    }
+
+    [data-theme="catppuccin-mocha"] {
+      --accent: #cba6f7;
+      --accent-bg: #cba6f7;
+      --accent-text: #cba6f7;
+      --badge-bg: #313244;
+      --badge-text: #cba6f7;
+      --bg-card: #313244;
+      --bg-page: #1e1e2e;
+      --bg-section-alt: #181825;
+      --border-card: #45475a;
+      --border-subtle: #313244;
+      --btn-outline-border: #585b70;
+      --btn-primary-text: #1e1e2e;
+      --text-muted: #6c7086;
+      --text-primary: #cdd6f4;
+      --text-secondary: #a6adc8;
+    }
+
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -678,12 +714,18 @@
     .theme-toggle svg {
       width: 16px;
       height: 16px;
+      display: none;
     }
 
-    [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
-    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
     [data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+    [data-theme="catppuccin-latte"] .theme-toggle .icon-cat-latte { display: inline; }
+    [data-theme="catppuccin-mocha"] .theme-toggle .icon-cat-mocha { display: inline; }
+
+    .app-cards-row {
+      display: flex;
+      gap: 12px;
+    }
 
     /* Responsive */
     @media (max-width: 1024px) {
@@ -779,6 +821,8 @@
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <svg class="icon-cat-latte" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        <svg class="icon-cat-mocha" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
       </button>
       <a href="#contact" class="btn-primary">Get in touch</a>
     </nav>
@@ -806,11 +850,20 @@
       <a href="#contact" class="btn-outline">Contact us</a>
     </div>
 
-    <div class="app-preview">
-      <img src="assets/images/deadpoint-logo.png" alt="Deadpoint app logo">
-      <div class="app-info">
-        <span class="name">Deadpoint</span>
-        <span class="sub">iOS, Android</span>
+    <div class="app-cards-row">
+      <div class="app-preview">
+        <img src="assets/images/deadpoint-logo.png" alt="Deadpoint app logo">
+        <div class="app-info">
+          <span class="name">Deadpoint</span>
+          <span class="sub">iOS, Android</span>
+        </div>
+      </div>
+      <div class="app-preview">
+        <img src="assets/images/coach-logo.png" alt="Coach Platform logo">
+        <div class="app-info">
+          <span class="name">Coach Platform</span>
+          <span class="sub">Web, Symfony</span>
+        </div>
       </div>
     </div>
    </div>
@@ -899,13 +952,26 @@
     <div class="product-card">
       <img src="assets/images/deadpoint-logo-large.png" alt="Deadpoint" class="logo">
       <div class="right">
-        <span class="prod-title">Deadpoint</span>
+        <span class="prod-title">Deadpoint — Mobile App</span>
         <p class="prod-desc">
-          Your personal climbing training assistant. Track your sessions, analyze progress, and follow structured training plans. Includes a coach platform for trainers to manage athletes remotely.
+          Your personal climbing training assistant for iOS and Android. Track sessions, analyze progress, follow structured training plans, and push your climbing to the next level.
         </p>
         <div class="badge-row">
           <span class="badge-pill accent">Coming Soon</span>
           <span class="badge-pill outline">iOS &amp; Android</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="assets/images/coach-logo-large.png" alt="Coach Platform" class="logo">
+      <div class="right">
+        <span class="prod-title">Deadpoint — Coach Platform</span>
+        <p class="prod-desc">
+          A dedicated web platform for climbing coaches to manage athletes, create training plans, track progress, and communicate — all powered by Symfony.
+        </p>
+        <div class="badge-row">
+          <span class="badge-pill accent">Web Platform</span>
+          <span class="badge-pill outline">Symfony</span>
         </div>
       </div>
     </div>
@@ -950,7 +1016,7 @@
    <div class="container">
     <div class="footer-border"></div>
     <div class="footer-row">
-      <span class="footer-copy">&copy; 2025 electrobits. All rights reserved.</span>
+      <span class="footer-copy">&copy; 2026 electrobits. All rights reserved.</span>
       <nav class="footer-nav">
         <a href="#about">About</a>
         <a href="#apps">Apps</a>
@@ -962,21 +1028,19 @@
   </footer>
 
   <script>
+    const themes = ['light', 'dark', 'catppuccin-latte', 'catppuccin-mocha'];
+
     function toggleTheme() {
       const html = document.documentElement;
       const current = html.getAttribute('data-theme');
-      if (current === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
     }
 
     (function() {
       const saved = localStorage.getItem('theme');
-      if (saved) {
+      if (saved && themes.includes(saved)) {
         document.documentElement.setAttribute('data-theme', saved);
       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
